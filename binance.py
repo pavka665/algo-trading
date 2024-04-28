@@ -8,7 +8,7 @@ class Binance:
     def __init__(self):
         self.base_url = 'https://fapi.binance.com'
 
-    def get_kline(self, symbol, interval, start_time=None, end_time=None, limit=500):
+    def get_klines(self, symbol, interval, start_time=None, end_time=None, limit=500):
         url = f'{self.base_url}/fapi/v1/klines'
         params = {
             'symbol': symbol,
